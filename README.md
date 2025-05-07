@@ -10,8 +10,6 @@ Using Server.py you will host a flask server, to which the infected computers wi
 <br>
 By using Shell.cmd (which just helps make the usage of the Shell easier) you can specify the target and what you would like to do:
 <br>
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-<br>
 **Current Features:**
 <br>
 *-Encrypt:*
