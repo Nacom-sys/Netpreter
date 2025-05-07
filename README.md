@@ -16,4 +16,9 @@ By using Shell.cmd (which just helps make the usage of the Shell easier) you can
 *-Encrypt:*
 <br>
 Uses XOR to encrypt files, specify a file (any file you want), then the script will calculate the hash code using hashlib and then use the Hash as the Key to encrypt the files using XOR.
-
+<br>
+*-Command:*
+<br>
+Enter a cmd command to be executed on the targets pc
+<br>
+<br>
